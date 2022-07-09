@@ -1,5 +1,9 @@
 import random 
-r  =  random.randint(1,100)
+start = input('Guess from :')
+end = input('Guess to :')
+start = int(start)
+end = int(end)
+r  =  random.randint(start,end)
 count = 0
 while True:
 	count += 1 # count = count + 1 
@@ -7,6 +11,7 @@ while True:
 	num = int(num)
 	if num == r:
 		print('Correct!')
+		print('guess',count,'times')
 		break
 	elif num > r:
 		print('Greater than the ans')
